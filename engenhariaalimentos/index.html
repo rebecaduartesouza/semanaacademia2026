@@ -1,162 +1,341 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Semana Acadêmica 2026</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semana Acadêmica 2026</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #222;
-        }
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-        header {
-            background: linear-gradient(90deg, #1b5e20, #2e7d32);
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-        }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f7f4;
+      color: #222;
+    }
 
-        .logos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
-            margin: 20px 0;
-            flex-wrap: wrap;
-        }
+    header {
+      background: linear-gradient(90deg, #1b5e20, #2e7d32);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
 
-        .logos img {
-            width: 120px;
-            height: auto;
-            background: white;
-            padding: 10px;
-            border-radius: 10px;
-        }
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+    }
 
-        .container {
-            width: 90%;
-            max-width: 1000px;
-            margin: 30px auto;
-        }
+    header p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
 
-        .dia {
-            background: white;
-            margin-bottom: 20px;
-            border-radius: 12px;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
+    .logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      background-color: white;
+      padding: 25px 15px;
+    }
 
-        .dia h2 {
-            margin: 0;
-            background-color: #2e7d32;
-            color: white;
-            padding: 15px;
-        }
+    .logos img {
+      width: 140px;
+      max-width: 100%;
+      height: auto;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    }
 
-        .evento {
-            padding: 15px 20px;
-            border-bottom: 1px solid #eee;
-        }
+    .container {
+      width: 90%;
+    max-width: 1100px;
+      margin: 30px auto;
+    }
 
-        .evento:last-child {
-            border-bottom: none;
-        }
+    .intro {
+      background-color: white;
+      border-radius: 14px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
 
-        .horario {
-            font-weight: bold;
-            color: #1b5e20;
-        }
+    .intro h2 {
+      margin-top: 0;
+      color: #1b5e20;
+    }
 
-        footer {
-            text-align: center;
-            background-color: #1b5e20;
-            color: white;
-            padding: 15px;
-            margin-top: 30px;
-        }
-    </style>
+    .dia {
+      background-color: white;
+      border-radius: 14px;
+      margin-bottom: 25px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .dia h2 {
+      margin: 0;
+      background-color: #2e7d32;
+      color: white;
+      padding: 16px 20px;
+      font-size: 1.4rem;
+    }
+
+    .evento {
+      padding: 18px 20px;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .evento:last-child {
+      border-bottom: none;
+    }
+
+    .horario {
+      font-weight: bold;
+      color: #1b5e20;
+      margin: 0 0 8px 0;
+      font-size: 1rem;
+    }
+
+    .titulo-evento {
+      font-weight: bold;
+      margin: 0 0 6px 0;
+      font-size: 1.05rem;
+    }
+
+    .descricao {
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    footer {
+      background-color: #1b5e20;
+      color: white;
+      text-align: center;
+      padding: 18px;
+      margin-top: 35px;
+    }
+
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .dia h2 {
+        font-size: 1.2rem;
+      }
+
+      .logos img {
+        width: 110px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>Semana Acadêmica 2026</h1>
-        <p>Universidade Federal da Fronteira Sul</p>
-        <p>Programação oficial do evento</p>
-    </header>
+  <header>
+    <h1>Semana Acadêmica 2026</h1>
+    <p>Universidade Federal da Fronteira Sul</p>
+    <p>Engenharia de Alimentos e Química</p>
+  </header>
 
-    <div class="logos">
-        <img src="logo-curso1.png" alt="Logo do Curso 1">
-        <img src="logo-curso2.png" alt="Logo do Curso 2">
-    </div>
+  <section class="logos">
+    <img src="logo-alimentos.png" alt="Logo de Engenharia de Alimentos">
+    <img src="logo-quimica.png" alt="Logo de Química">
+  </section>
 
-    <div class="container">
+  <main class="container">
+    <section class="intro">
+      <h2>Programação Oficial</h2>
+      <p>
+        Bem-vindos à Semana Acadêmica 2026. Confira abaixo a programação semanal
+        com palestras, oficinas, minicursos, apresentações e atividades de integração.
+      </p>
+    </section>
 
-        <div class="dia">
-            <h2>Segunda-feira</h2>
-            <div class="evento">
-                <p class="horario">08:00</p>
-                <p>Abertura oficial do evento</p>
-            </div>
-            <div class="evento">
-                <p class="horario">09:00</p>
-                <p>Palestra magna</p>
-            </div>
-            <div class="evento">
-                <p class="horario">14:00</p>
-                <p>Oficina / minicurso</p>
-            </div>
-        </div>
+    <section class="dia">
+      <h2>Segunda-feira</h2>
 
-        <div class="dia">
-            <h2>Terça-feira</h2>
-            <div class="evento">
-                <p class="horario">08:00</p>
-                <p>Atividade da manhã</p>
-            </div>
-            <div class="evento">
-                <p class="horario">14:00</p>
-                <p>Atividade da tarde</p>
-            </div>
-            <div class="evento">
-                <p class="horario">19:00</p>
-                <p>Palestra noturna</p>
-            </div>
-        </div>
+      <div class="evento">
+        <p class="horario">08:00 - 08:30</p>
+        <p class="titulo-evento">Credenciamento</p>
+        <p class="descricao">Recepção dos participantes e entrega de materiais do evento.</p>
+      </div>
 
-        <div class="dia">
-            <h2>Quarta-feira</h2>
-            <div class="evento">
-                <p class="horario">08:00</p>
-                <p>Programação da quarta</p>
-            </div>
-        </div>
+      <div class="evento">
+        <p class="horario">08:30 - 09:00</p>
+        <p class="titulo-evento">Abertura Oficial</p>
+        <p class="descricao">Cerimônia de abertura com coordenação, professores e convidados.</p>
+      </div>
 
-        <div class="dia">
-            <h2>Quinta-feira</h2>
-            <div class="evento">
-                <p class="horario">08:00</p>
-                <p>Programação da quinta</p>
-            </div>
-        </div>
+      <div class="evento">
+        <p class="horario">09:00 - 10:30</p>
+        <p class="titulo-evento">Palestra Magna</p>
+        <p class="descricao">Panorama atual da ciência, inovação e mercado profissional.</p>
+      </div>
 
-        <div class="dia">
-            <h2>Sexta-feira</h2>
-            <div class="evento">
-                <p class="horario">08:00</p>
-                <p>Encerramento / atividade final</p>
-            </div>
-        </div>
+      <div class="evento">
+        <p class="horario">10:45 - 12:00</p>
+        <p class="titulo-evento">Mesa-redonda</p>
+        <p class="descricao">Desafios e oportunidades para os cursos de Engenharia de Alimentos e Química.</p>
+      </div>
 
-    </div>
+      <div class="evento">
+        <p class="horario">14:00 - 16:00</p>
+        <p class="titulo-evento">Oficina 1</p>
+        <p class="descricao">Atividade prática introdutória com participação dos estudantes.</p>
+      </div>
 
-    <footer>
-        <p>© 2026 - Semana Acadêmica</p>
-    </footer>
+      <div class="evento">
+        <p class="horario">19:00 - 21:00</p>
+        <p class="titulo-evento">Palestra Noturna</p>
+        <p class="descricao">Formação acadêmica, pesquisa e atuação profissional.</p>
+      </div>
+    </section>
+
+    <section class="dia">
+      <h2>Terça-feira</h2>
+
+      <div class="evento">
+        <p class="horario">08:00 - 10:00</p>
+        <p class="titulo-evento">Minicurso 1</p>
+        <p class="descricao">Introdução a técnicas e ferramentas aplicadas à área.</p>
+      </div>
+
+      <div class="evento">
+        <p class="horario">10:15 - 12:00</p>
+        <p class="titulo-evento">Palestra Técnica</p>
+        <p class="descricao">Qualidade, controle e inovação em processos industriais.</p>
+      </div>
+
+      <div class="evento">
+        <p class="horario">14:00 - 16:00</p>
+        <p class="titulo-evento">Workshop</p>
+        <p class="descricao">Desenvolvimento de competências acadêmicas e profissionais.</p>
+      </div>
+
+      <div class="evento">
+        <p class="horario">16:15 - 17:30</p>
+        <p class="titulo-evento">Apresentação de Projetos</p>
+        <p class="descricao">Socialização de trabalhos, pesquisas e iniciativas estudantis.</p>
+      </div>
+
+      <div class="evento">
+        <p class="horario">19:00 - 21:00</p>
+        <p class="titulo-evento">Mesa de Discussão</p>
+        <p class="descricao">Integração entre universidade, pesquisa e setor produtivo.</p>
+      </div>
+    </section>
+
+    <section class="dia">
+      <h2>Quarta-feira</h2>
+
+      <div class="evento">
+        <p class="horario">08:00 - 09:30</p>
+        <p class="titulo-evento">Palestra Temática</p>
+        <p class="descricao">Sustentabilidade, tecnologia e perspectivas para o futuro.</p>
+      </div>
+
+      <div class="evento">
+        <p class="horario">09:45 - 12:00</p>
+        <p class="titulo-evento">Minicurso 2</p>
+        <p class="descricao">Atividade formativa com conteúdo aplicado às áreas dos cursos.</p>
+      </div>
+
+      <div class="evento">
+        <p class="horario">14:00 - 15:30</p>
+        <p class="titulo-evento">Sessão de Apresentações</p>
+        <p class="descricao">Exposição de trabalhos acadêmicos e relatos de experiências.</p>
+      </div>
+
+      <div class="evento">
+        <p class="horario">15:45 - 17:30</p>
+        <p class="titulo-evento">Painel de Egressos</p>
+        <p class="descricao">Trajetórias profissionais e experiências no mercado de trabalho.</p>
+      </div>
+
+      <div class="evento">
+        <p class="horario">19:00 - 21:00</p>
+        <p class="titulo-evento">Palestra Especial</p>
+        <p class="descricao">Ciência, inovação e empreendedorismo na formação universitária.</p>
+      </div>
+    </section>
+
+    <section class="dia">
+      <h2>Quinta-feira</h2>
+
+      <div class="evento">
+        <p class="horario">08:00 - 10:00</p>
+        <p class="titulo-evento">Oficina 2</p>
+        <p class="descricao">Atividade prática com foco em aplicações e resolução de problemas.</p>
+      </div>
+
+      <div class="evento">
+        <p class="horario">10:15 - 12:00</p>
+        <p class="titulo-evento">Palestra Técnica</p>
+        <p class="descricao">Tendências atuais nas áreas de alimentos, química e inovação.</p>
+      </div>
+
+      <div class="evento">
+        <p class="horario">14:00 - 16:00</p>
+        <p class="titulo-evento">Roda de Conversa</p>
+        <p class="descricao">Discussão sobre extensão, pesquisa, estágio e oportunidades acadêmicas.</p>
+      </div>
+
+      <div class="evento">
+        <p class="horario">16:15 - 17:30</p>
+        <p class="titulo-evento">Atividade Integrativa</p>
+        <p class="descricao">Momento de troca entre estudantes, docentes e participantes do evento.</p>
+      </div>
+
+      <div class="evento">
+        <p class="horario">19:00 - 21:00</p>
+        <p class="titulo-evento">Palestra de Encaminhamento Profissional</p>
+        <p class="descricao">Competências, carreira e construção do perfil profissional.</p>
+      </div>
+    </section>
+
+    <section class="dia">
+      <h2>Sexta-feira</h2>
+
+      <div class="evento">
+        <p class="horario">08:00 - 10:00</p>
+        <p class="titulo-evento">Sessão Final de Trabalhos</p>
+        <p class="descricao">Últimas apresentações e encerramento das exposições acadêmicas.</p>
+      </div>
+
+      <div class="evento">
+        <p class="horario">10:15 - 11:30</p>
+        <p class="titulo-evento">Avaliação e Feedback</p>
+        <p class="descricao">Espaço para participação dos estudantes e avaliação do evento.</p>
+      </div>
+
+      <div class="evento">
+        <p class="horario">11:30 - 12:00</p>
+        <p class="titulo-evento">Encerramento Oficial</p>
+        <p class="descricao">Agradecimentos finais e encerramento da Semana Acadêmica 2026.</p>
+      </div>
+
+      <div class="evento">
+        <p class="horario">14:00 - 16:00</p>
+        <p class="titulo-evento">Atividade de Integração</p>
+        <p class="descricao">Momento de confraternização e integração entre os participantes.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 - Semana Acadêmica | UFFS</p>
+  </footer>
 
 </body>
 </html>
