@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bem vindos</title>
+  <title>Semana Acadêmica 2026</title>
 
   <style>
     * {
@@ -20,53 +20,43 @@
     header {
       background: linear-gradient(90deg, #1b5e20, #2e7d32);
       color: white;
+      padding: 30px 20px;
+    }
+
+    .header-topo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
       text-align: center;
-      padding: 40px 20px;
     }
 
-    header h1 {
+    .header-topo img {
+      width: 65px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .titulo h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 2.2rem;
     }
 
-    header p {
-      margin: 8px 0 0 0;
-      font-size: 1.1rem;
+    .titulo p {
+      margin: 6px 0 0 0;
+      font-size: 1rem;
     }
 
     .banner {
       width: 100%;
-      max-height: 420px;
-      overflow: hidden;
       background-color: #ddd;
     }
 
     .banner img {
       width: 100%;
-      height: 420px;
-      object-fit: cover;
+      height: auto;
       display: block;
-    }
-
-    .logos-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  margin-top: 18px;
-  flex-wrap: wrap;
-}
-
-.logos-header img {
-  width: 70px;
-  max-height: 70px;
-  height: auto;
-  object-fit: contain;
-  background: transparent;
-  padding: 0;
-  border-radius: 0;
-  box-shadow: none;
-
     }
 
     .container {
@@ -77,10 +67,10 @@
 
     .intro {
       background-color: white;
-      border-radius: 14px;
-      padding: 25px;
+      border-radius: 16px;
+      padding: 28px 22px;
       margin-bottom: 30px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
       text-align: center;
     }
 
@@ -89,86 +79,148 @@
       color: #1b5e20;
     }
 
+    .botoes-topo {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .botao-inscricao,
+    .botao-secundario {
+      display: inline-block;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .botao-inscricao {
+      background-color: #1b5e20;
+      color: white;
+    }
+
+    .botao-inscricao:hover {
+      background-color: #2e7d32;
+    }
+
+    .botao-secundario {
+      background-color: #e8f0e8;
+      color: #1b5e20;
+    }
+
+    .botao-secundario:hover {
+      background-color: #d8e6d8;
+    }
+
     .programacao-titulo {
       text-align: center;
       color: #1b5e20;
-      margin-bottom: 20px;
+      margin-bottom: 8px;
       font-size: 2rem;
     }
 
-   .calendario-semanal {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 0;
-  width: 100%;
-  background-color: white;
-  border: 2px solid #c62828;
-  margin-top: 20px;
-}
+    .subtitulo-agenda {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
 
-.coluna-dia {
-  padding-bottom: 10px;
-  min-height: 100%;
-}
+    .tabela-container {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border-radius: 16px;
+    }
 
-.coluna-dia h3 {
-  margin: 0;
-  text-align: center;
-  padding: 10px;
-  border-bottom: 2px solid #c62828;
-  border-right: 1px solid #c62828;
-  font-size: 1.1rem;
-  background-color: #ffffff;
-}
+    .tabela-agenda {
+      width: 100%;
+      min-width: 950px;
+      border-collapse: separate;
+      border-spacing: 0;
+      table-layout: fixed;
+      background-color: white;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      overflow: hidden;
+    }
 
-.coluna-dia:last-child h3 {
-  border-right: none;
-}
+    .tabela-agenda th,
+    .tabela-agenda td {
+      border: none;
+      padding: 10px;
+      vertical-align: top;
+    }
 
-.coluna-dia p {
-  margin: 0;
-  padding: 3px 10px;
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
+    .tabela-agenda th {
+      background-color: #0d47a1;
+      color: white;
+      text-align: center;
+      font-size: 1rem;
+    }
 
-.segunda {
-  background-color: #f8caca;
-}
+    .col-horario {
+      width: 100px;
+      background-color: #f1f1f1;
+      font-weight: bold;
+      text-align: center;
+      color: #222;
+    }
 
-.terca {
-  background-color: #cfe7bf;
-}
+    .segunda-col {
+      background-color: #f3dddd;
+    }
 
-.quarta {
-  background-color: #f2c89e;
-}
+    .terca-col {
+      background-color: #dbe7cf;
+    }
 
-.quinta {
-  background-color: #bfe3a8;
-}
+    .quarta-col {
+      background-color: #ead4bc;
+    }
 
-.sexta {
-  background-color: #f4d45d;
-}
+    .quinta-col {
+      background-color: #d9e8cb;
+    }
 
-@media (max-width: 1100px) {
-  .calendario-semanal {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+    .sexta-col {
+      background-color: #ecd98d;
+    }
 
-@media (max-width: 700px) {
-  .calendario-semanal {
-    grid-template-columns: 1fr;
-  }
-}
+    .nome-evento {
+      display: block;
+      font-weight: bold;
+      color: #0e5a2f;
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+    }
+
+    .info-evento {
+      display: block;
+      font-size: 0.9rem;
+      line-height: 1.45;
+      color: #222;
+    }
+
+    .vazio {
+      min-height: 70px;
+    }
+
+    .obs-mobile {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 0.92rem;
+      color: #555;
+    }
+
     .equipe {
       background-color: white;
-      border-radius: 14px;
+      border-radius: 16px;
       padding: 30px 20px;
       margin-top: 35px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
       text-align: center;
     }
 
@@ -186,7 +238,7 @@
 
     .membro {
       background-color: #f8faf8;
-      border-radius: 12px;
+      border-radius: 14px;
       padding: 20px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     }
@@ -220,293 +272,53 @@
       margin-top: 35px;
       font-size: 14px;
     }
-    .header-topo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-   }
 
-.header-topo img {
-  width: 70px;
-  height: auto;
-  object-fit: contain;
-  }
+    @media (max-width: 700px) {
+      .titulo h1 {
+        font-size: 1.6rem;
+      }
 
-.titulo {
-  text-align: center;
-  }
+      .header-topo img {
+        width: 55px;
+      }
 
-    @media (max-width: 1200px) {
-      .calendario {
-        grid-template-columns: repeat(3, 1fr);
+      .container {
+        width: 96%;
+      }
+
+      .membro img {
+        width: 120px;
+        height: 120px;
+      }
+
+      .botoes-topo {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .botao-inscricao,
+      .botao-secundario {
+        width: 100%;
+        max-width: 320px;
       }
     }
-
-    @media (max-width: 800px) {
-      .calendario {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
-
-      .calendario {
-        grid-template-columns: 1fr;
-      }
-
-      .logos img {
-        width: 110px;
-      }
-
-      .banner img {
-        height: 250px;
-      }
-      @media (max-width: 900px) {
-  .calendario {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .calendario {
-    grid-template-columns: 1fr;
-  }
-}
-    }
-    .programacao-titulo {
-  text-align: center;
-  color: #1b5e20;
-  margin-bottom: 8px;
-  font-size: 2rem;
-}
-
-.subtitulo-agenda {
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.tabela-agenda {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  background-color: white;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-}
-
-.tabela-agenda th,
-.tabela-agenda td {
-  border: 2px solid #d9d9d9;
-  padding: 12px 10px;
-  vertical-align: top;
-  text-align: left;
-}
-
-.tabela-agenda th {
-  background-color: #0d47a1;
-  color: white;
-  text-align: center;
-  font-size: 1rem;
-}
-
-.col-horario {
-  width: 130px;
-  background-color: #f5f5f5;
-  font-weight: bold;
-  text-align: center;
-}
-
-.segunda-col {
-  background-color: #fde2e2;
-}
-
-.terca-col {
-  background-color: #e3f0d7;
-}
-
-.quarta-col {
-  background-color: #f7dfc6;
-}
-
-.quinta-col {
-  background-color: #dff0d2;
-}
-
-.sexta-col {
-  background-color: #f8e18b;
-}
-
-.bloco-evento {
-  margin-bottom: 10px;
-}
-
-.bloco-evento:last-child {
-  margin-bottom: 0;
-}
-
-.nome-evento {
-  font-weight: bold;
-  color: #1b5e20;
-  display: block;
-  margin-bottom: 4px;
-}
-
-.info-evento {
-  display: block;
-  font-size: 0.92rem;
-  line-height: 1.5;
-}
-
-@media (max-width: 900px) {
-  .tabela-agenda {
-    font-size: 0.9rem;
-  }
-
-  .tabela-agenda th,
-  .tabela-agenda td {
-    padding: 8px 6px;
-  }
-}
-    .programacao-titulo {
-  text-align: center;
-  color: #1b5e20;
-  margin-bottom: 8px;
-  font-size: 2rem;
-}
-
-.subtitulo-agenda {
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.tabela-agenda {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  background-color: white;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-  table-layout: fixed;
-}
-
-.tabela-agenda th,
-.tabela-agenda td {
-  border: 1px solid #cfcfcf;
-  padding: 8px;
-  vertical-align: top;
-}
-
-.tabela-agenda th {
-  background-color: #0d47a1;
-  color: white;
-  text-align: center;
-  font-size: 1rem;
-}
-
-.col-horario {
-  width: 90px;
-  background-color: #f3f3f3;
-  font-weight: bold;
-  text-align: center;
-}
-
-.segunda-col {
-  background-color: #fde2e2;
-}
-
-.terca-col {
-  background-color: #e3f0d7;
-}
-
-.quarta-col {
-  background-color: #f7dfc6;
-}
-
-.quinta-col {
-  background-color: #dff0d2;
-}
-
-.sexta-col {
-  background-color: #f8e18b;
-}
-
-.nome-evento {
-  display: block;
-  font-weight: bold;
-  color: #1b5e20;
-  margin-bottom: 4px;
-}
-
-.info-evento {
-  display: block;
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-.vazio {
-  color: transparent;
-}
-
-@media (max-width: 900px) {
-  .tabela-agenda {
-    font-size: 0.85rem;
-  }
-
-  .tabela-agenda th,
-  .tabela-agenda td {
-    padding: 6px;
-  }
-}
-    .tabela-container {
-  width: 100%;
-  overflow-x: auto;
-}
-
-.tabela-agenda {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  background-color: white;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-  table-layout: fixed;
-  border: none;
-}
-    .banner img {
-  width: 100%;
-  height: auto !important;
-  display: block;
-}
-    .tabela-agenda,
-.tabela-agenda th,
-.tabela-agenda td {
-  border: none !important;
-}
-
-.tabela-agenda {
-  border-collapse: separate;
-border-spacing: 0;
-}
   </style>
 </head>
 <body>
 
-<header>
-  <div class="header-topo">
-    <img src="logo-alimentos.png.png" alt="Logo Alimentos">
-    
-    <div class="titulo">
-      <h1>Bem-Vindos</h1>
-      <p>Universidade Federal da Fronteira Sul-Campus Laranjeiras do Sul</p>
-    </div>
+  <header>
+    <div class="header-topo">
+      <img src="logo-alimentos.png.png" alt="Logo de Engenharia de Alimentos">
 
-    <img src="logo-quimica.png.png" alt="Logo Química">
-  </div>
-</header>
+      <div class="titulo">
+        <h1>Bem-vindos</h1>
+        <p>Universidade Federal da Fronteira Sul - Campus Laranjeiras do Sul</p>
+        <p>Semana Acadêmica 2026</p>
+      </div>
+
+      <img src="logo-quimica.png.png" alt="Logo de Química">
+    </div>
+  </header>
 
   <section class="banner">
     <img src="banner-semana.jpg.png" alt="Banner da Semana Acadêmica">
@@ -517,357 +329,361 @@ border-spacing: 0;
       <h2>Programação Oficial</h2>
       <p>
         Confira abaixo a programação completa da Semana Acadêmica 2026,
-        organizada em formato de calendário.
+        organizada em formato de agenda semanal.
       </p>
+
+      <div class="botoes-topo">
+        <a href="COLE_AQUI_O_LINK_DO_FORMULARIO" class="botao-inscricao" target="_blank">
+          Fazer inscrição
+        </a>
+
+        <a href="#organizacao" class="botao-secundario">
+          Ver organização
+        </a>
+      </div>
     </section>
 
-  <h2 class="programacao-titulo">Agenda Semanal</h2>
-<p class="subtitulo-agenda">Semana Acadêmica - 18 a 22 de Maio de 2026</p>
+    <h2 class="programacao-titulo">Agenda Semanal</h2>
+    <p class="subtitulo-agenda">Semana Acadêmica - 18 a 22 de Maio de 2026</p>
 
-<div class="tabela-container">
-  <table class="tabela-agenda">
-  <tr>
-    <th>Horário</th>
-    <th>Segunda</th>
-    <th>Terça</th>
-    <th>Quarta</th>
-    <th>Quinta</th>
-    <th>Sexta</th>
-  </tr>
+    <div class="tabela-container">
+      <table class="tabela-agenda">
+        <tr>
+          <th>Horário</th>
+          <th>Segunda</th>
+          <th>Terça</th>
+          <th>Quarta</th>
+          <th>Quinta</th>
+          <th>Sexta</th>
+        </tr>
 
- 
-    <td class="quarta-col">
-      <span class="nome-evento">Visita Técnica</span>
-      <span class="info-evento">Empresa: __________________</span>
-      <span class="info-evento">Professor: __________________</span>
-    </td>
-    <td class="quinta-col"></td>
-    <td class="sexta-col"></td>
-  </tr>
+        <tr>
+          <td class="col-horario">08:00</td>
+          <td class="segunda-col vazio"></td>
+          <td class="terca-col vazio"></td>
+          <td class="quarta-col">
+            <span class="nome-evento">Visita Técnica</span>
+            <span class="info-evento">Empresa: __________________</span>
+            <span class="info-evento">Professor: __________________</span>
+          </td>
+          <td class="quinta-col vazio"></td>
+          <td class="sexta-col vazio"></td>
+        </tr>
 
-  <tr>
-    <td class="col-horario">08:30</td>
-    <td class="segunda-col"></td>
-    <td class="terca-col"></td>
-    <td class="quarta-col">
-      <span class="nome-evento">Visita Técnica</span>
-      <span class="info-evento">Empresa: __________________</span>
-      <span class="info-evento">Professor: __________________</span>
-    </td>
-    <td class="quinta-col"></td>
-    <td class="sexta-col"></td>
-  </tr>
+        <tr>
+          <td class="col-horario">08:30</td>
+          <td class="segunda-col vazio"></td>
+          <td class="terca-col vazio"></td>
+          <td class="quarta-col">
+            <span class="nome-evento">Visita Técnica</span>
+            <span class="info-evento">Empresa: __________________</span>
+            <span class="info-evento">Professor: __________________</span>
+          </td>
+          <td class="quinta-col vazio"></td>
+          <td class="sexta-col vazio"></td>
+        </tr>
 
-  <tr>
-    <td class="col-horario">09:00</td>
-    <td class="segunda-col"></td>
-    <td class="terca-col"></td>
-    <td class="quarta-col">
-      <span class="nome-evento">Visita Técnica</span>
-      <span class="info-evento">Empresa: __________________</span>
-      <span class="info-evento">Professor: __________________</span>
-    </td>
-    <td class="quinta-col"></td>
-    <td class="sexta-col"></td>
-  </tr>
+        <tr>
+          <td class="col-horario">09:00</td>
+          <td class="segunda-col vazio"></td>
+          <td class="terca-col vazio"></td>
+          <td class="quarta-col">
+            <span class="nome-evento">Visita Técnica</span>
+            <span class="info-evento">Empresa: __________________</span>
+            <span class="info-evento">Professor: __________________</span>
+          </td>
+          <td class="quinta-col vazio"></td>
+          <td class="sexta-col vazio"></td>
+        </tr>
 
-  <tr>
-    <td class="col-horario">09:30</td>
-    <td class="segunda-col"></td>
-    <td class="terca-col"></td>
-    <td class="quarta-col">
-      <span class="nome-evento">Visita Técnica</span>
-      <span class="info-evento">Empresa: __________________</span>
-      <span class="info-evento">Professor: __________________</span>
-    </td>
-    <td class="quinta-col"></td>
-    <td class="sexta-col"></td>
-  </tr>
+        <tr>
+          <td class="col-horario">09:30</td>
+          <td class="segunda-col vazio"></td>
+          <td class="terca-col vazio"></td>
+          <td class="quarta-col">
+            <span class="nome-evento">Visita Técnica</span>
+            <span class="info-evento">Empresa: __________________</span>
+            <span class="info-evento">Professor: __________________</span>
+          </td>
+          <td class="quinta-col vazio"></td>
+          <td class="sexta-col vazio"></td>
+        </tr>
 
-  <tr>
-    <td class="col-horario">10:00</td>
-    <td class="segunda-col"></td>
-    <td class="terca-col">
-      <span class="nome-evento">Palestra / Exposição</span>
-      <span class="info-evento">Palestrante: __________________</span>
-      <span class="info-evento">Professor: __________________</span>
-      <span class="info-evento">Empresa: __________________</span>
-    </td>
-    <td class="quarta-col">
-      <span class="nome-evento">Visita Técnica</span>
-      <span class="info-evento">Empresa: __________________</span>
-      <span class="info-evento">Professor: __________________</span>
-    </td>
-    <td class="quinta-col">
-      <span class="nome-evento">Apresentação de Trabalhos</span>
-      <span class="info-evento">Coordenação: __________________</span>
-    </td>
-    <td class="sexta-col">
-      <span class="nome-evento">Lançamento / Apresentação</span>
-      <span class="info-evento">Responsável: __________________</span>
-    </td>
-  </tr>
+        <tr>
+          <td class="col-horario">10:00</td>
+          <td class="segunda-col vazio"></td>
+          <td class="terca-col vazio"></td>
+          <td class="quarta-col">
+            <span class="nome-evento">Visita Técnica</span>
+            <span class="info-evento">Empresa: __________________</span>
+            <span class="info-evento">Professor: __________________</span>
+          </td>
+          <td class="quinta-col vazio"></td>
+          <td class="sexta-col vazio"></td>
+        </tr>
 
-  <tr>
-    <td class="col-horario">10:30</td>
-    <td class="segunda-col"></td>
-    <td class="terca-col"></td>
-    <td class="quarta-col">
-      <span class="nome-evento">Visita Técnica</span>
-      <span class="info-evento">Empresa: __________________</span>
-      <span class="info-evento">Professor: __________________</span>
-    </td>
-    <td class="quinta-col"></td>
-    <td class="sexta-col"></td>
-  </tr>
+        <tr>
+          <td class="col-horario">10:30</td>
+          <td class="segunda-col vazio"></td>
+          <td class="terca-col vazio"></td>
+          <td class="quarta-col">
+            <span class="nome-evento">Visita Técnica</span>
+            <span class="info-evento">Empresa: __________________</span>
+            <span class="info-evento">Professor: __________________</span>
+          </td>
+          <td class="quinta-col vazio"></td>
+          <td class="sexta-col vazio"></td>
+        </tr>
 
-  <tr>
-    <td class="col-horario">11:00</td>
-    <td class="segunda-col"></td>
-    <td class="terca-col"></td>
-    <td class="quarta-col">
-      <span class="nome-evento">Visita Técnica</span>
-      <span class="info-evento">Empresa: __________________</span>
-      <span class="info-evento">Professor: __________________</span>
-    </td>
-    <td class="quinta-col"></td>
-    <td class="sexta-col"></td>
-  </tr>
+        <tr>
+          <td class="col-horario">11:00</td>
+          <td class="segunda-col vazio"></td>
+          <td class="terca-col vazio"></td>
+          <td class="quarta-col">
+            <span class="nome-evento">Visita Técnica</span>
+            <span class="info-evento">Empresa: __________________</span>
+            <span class="info-evento">Professor: __________________</span>
+          </td>
+          <td class="quinta-col vazio"></td>
+          <td class="sexta-col vazio"></td>
+        </tr>
 
-  <tr>
-    <td class="col-horario">11:30</td>
-    <td class="segunda-col"></td>
-    <td class="terca-col"></td>
-    <td class="quarta-col">
-      <span class="nome-evento">Visita Técnica</span>
-      <span class="info-evento">Empresa: __________________</span>
-      <span class="info-evento">Professor: __________________</span>
-    </td>
-    <td class="quinta-col"></td>
-    <td class="sexta-col"></td>
-  </tr>
+        <tr>
+          <td class="col-horario">11:30</td>
+          <td class="segunda-col vazio"></td>
+          <td class="terca-col vazio"></td>
+          <td class="quarta-col">
+            <span class="nome-evento">Visita Técnica</span>
+            <span class="info-evento">Empresa: __________________</span>
+            <span class="info-evento">Professor: __________________</span>
+          </td>
+          <td class="quinta-col vazio"></td>
+          <td class="sexta-col vazio"></td>
+        </tr>
 
-  <tr>
-    <td class="col-horario">12:00</td>
-    <td class="segunda-col"></td>
-    <td class="terca-col"></td>
-    <td class="quarta-col"></td>
-    <td class="quinta-col"></td>
-    <td class="sexta-col"></td>
-  </tr>
+        <tr>
+          <td class="col-horario">12:00</td>
+          <td class="segunda-col vazio"></td>
+          <td class="terca-col vazio"></td>
+          <td class="quarta-col">
+            <span class="nome-evento">Visita Técnica</span>
+            <span class="info-evento">Empresa: __________________</span>
+            <span class="info-evento">Professor: __________________</span>
+          </td>
+          <td class="quinta-col vazio"></td>
+          <td class="sexta-col vazio"></td>
+        </tr>
 
-  <tr>
-    <td class="col-horario">13:30</td>
-    <td class="segunda-col">
-      <span class="nome-evento">Abertura</span>
-      <span class="info-evento">Palestrante: __________________</span>
-      <span class="info-evento">Professor: __________________</span>
-      <span class="info-evento">Instituição: __________________</span>
-    </td>
-    <td class="terca-col"></td>
-    <td class="quarta-col">
-      <span class="nome-evento">Visita Técnica</span>
-      <span class="info-evento">Empresa: __________________</span>
-      <span class="info-evento">Professor: __________________</span>
-    </td>
-    <td class="quinta-col">
-      <span class="nome-evento">Mini-curso</span>
-      <span class="info-evento">Ministrante: __________________</span>
-      <span class="info-evento">Professor: __________________</span>
-      <span class="info-evento">Empresa: __________________</span>
-    </td>
-    <td class="sexta-col">
-      <span class="nome-evento">Palestra</span>
-      <span class="info-evento">Palestrante: __________________</span>
-      <span class="info-evento">Professor: __________________</span>
-      <span class="info-evento">Empresa: __________________</span>
-    </td>
-  </tr>
+        <tr>
+          <td class="col-horario">13:30</td>
+          <td class="segunda-col">
+            <span class="nome-evento">Abertura</span>
+            <span class="info-evento">Palestrante: __________________</span>
+            <span class="info-evento">Professor: __________________</span>
+            <span class="info-evento">Instituição: __________________</span>
+          </td>
+          <td class="terca-col">
+            <span class="nome-evento">Mini-curso</span>
+            <span class="info-evento">Ministrante: __________________</span>
+            <span class="info-evento">Professor: __________________</span>
+            <span class="info-evento">Empresa: __________________</span>
+          </td>
+          <td class="quarta-col">
+            <span class="nome-evento">Retorno / Organização</span>
+            <span class="info-evento">Responsável: __________________</span>
+          </td>
+          <td class="quinta-col">
+            <span class="nome-evento">Mini-curso</span>
+            <span class="info-evento">Ministrante: __________________</span>
+            <span class="info-evento">Professor: __________________</span>
+            <span class="info-evento">Empresa: __________________</span>
+          </td>
+          <td class="sexta-col">
+            <span class="nome-evento">Palestra</span>
+            <span class="info-evento">Palestrante: __________________</span>
+            <span class="info-evento">Professor: __________________</span>
+            <span class="info-evento">Empresa: __________________</span>
+          </td>
+        </tr>
 
-  <tr>
-    <td class="col-horario">14:00</td>
-    <td class="segunda-col">
-      <span class="nome-evento">Mesa-redonda</span>
-      <span class="info-evento">Participantes: __________________</span>
-      <span class="info-evento">Mediação: __________________</span>
-    </td>
-    <td class="terca-col">
-      <span class="nome-evento">Mini-curso</span>
-      <span class="info-evento">Ministrante: __________________</span>
-      <span class="info-evento">Professor: __________________</span>
-      <span class="info-evento">Empresa: __________________</span>
-    </td>
-    <td class="quarta-col">
-      <span class="nome-evento">Visita Técnica</span>
-      <span class="info-evento">Empresa: __________________</span>
-      <span class="info-evento">Professor: __________________</span>
-    </td>
-    <td class="quinta-col">
-      <span class="nome-evento">Apresentação de Trabalhos</span>
-      <span class="info-evento">Coordenação: __________________</span>
-    </td>
-    <td class="sexta-col">
-      <span class="nome-evento">Mesa-redonda</span>
-      <span class="info-evento">Participantes: __________________</span>
-      <span class="info-evento">Mediação: __________________</span>
-    </td>
-  </tr>
+        <tr>
+          <td class="col-horario">14:00</td>
+          <td class="segunda-col">
+            <span class="nome-evento">Mesa-redonda</span>
+            <span class="info-evento">Participantes: __________________</span>
+            <span class="info-evento">Mediação: __________________</span>
+          </td>
+          <td class="terca-col">
+            <span class="nome-evento">Mini-curso</span>
+            <span class="info-evento">Ministrante: __________________</span>
+            <span class="info-evento">Professor: __________________</span>
+            <span class="info-evento">Empresa: __________________</span>
+          </td>
+          <td class="quarta-col">
+            <span class="nome-evento">Apresentação</span>
+            <span class="info-evento">Responsável: __________________</span>
+          </td>
+          <td class="quinta-col">
+            <span class="nome-evento">Apresentação de Trabalhos</span>
+            <span class="info-evento">Coordenação: __________________</span>
+          </td>
+          <td class="sexta-col">
+            <span class="nome-evento">Mesa-redonda</span>
+            <span class="info-evento">Participantes: __________________</span>
+            <span class="info-evento">Mediação: __________________</span>
+          </td>
+        </tr>
 
-  <tr>
-    <td class="col-horario">14:30</td>
-    <td class="segunda-col">
-      <span class="nome-evento">Mesa-redonda</span>
-      <span class="info-evento">Participantes: __________________</span>
-      <span class="info-evento">Mediação: __________________</span>
-    </td>
-    <td class="terca-col">
-      <span class="nome-evento">Mini-curso</span>
-      <span class="info-evento">Ministrante: __________________</span>
-      <span class="info-evento">Professor: __________________</span>
-      <span class="info-evento">Empresa: __________________</span>
-    </td>
-    <td class="quarta-col">
-      <span class="nome-evento">Visita Técnica</span>
-      <span class="info-evento">Empresa: __________________</span>
-      <span class="info-evento">Professor: __________________</span>
-    </td>
-    <td class="quinta-col">
-      <span class="nome-evento">Apresentação de Trabalhos</span>
-      <span class="info-evento">Coordenação: __________________</span>
-    </td>
-    <td class="sexta-col">
-      <span class="nome-evento">Mini-curso / Palestra</span>
-      <span class="info-evento">Palestrante: __________________</span>
-      <span class="info-evento">Professor: __________________</span>
-      <span class="info-evento">Empresa: __________________</span>
-    </td>
-  </tr>
+        <tr>
+          <td class="col-horario">14:30</td>
+          <td class="segunda-col">
+            <span class="nome-evento">Mesa-redonda</span>
+            <span class="info-evento">Participantes: __________________</span>
+            <span class="info-evento">Mediação: __________________</span>
+          </td>
+          <td class="terca-col">
+            <span class="nome-evento">Mini-curso</span>
+            <span class="info-evento">Ministrante: __________________</span>
+            <span class="info-evento">Professor: __________________</span>
+            <span class="info-evento">Empresa: __________________</span>
+          </td>
+          <td class="quarta-col">
+            <span class="nome-evento">Palestra / Exposição</span>
+            <span class="info-evento">Palestrante: __________________</span>
+            <span class="info-evento">Professor: __________________</span>
+            <span class="info-evento">Empresa: __________________</span>
+          </td>
+          <td class="quinta-col">
+            <span class="nome-evento">Apresentação de Trabalhos</span>
+            <span class="info-evento">Coordenação: __________________</span>
+          </td>
+          <td class="sexta-col">
+            <span class="nome-evento">Mini-curso / Palestra</span>
+            <span class="info-evento">Palestrante: __________________</span>
+            <span class="info-evento">Professor: __________________</span>
+            <span class="info-evento">Empresa: __________________</span>
+          </td>
+        </tr>
 
-  <tr>
-    <td class="col-horario">15:00</td>
-    <td class="segunda-col">
-      <span class="nome-evento">Dinâmica</span>
-      <span class="info-evento">Responsável: __________________</span>
-    </td>
-    <td class="terca-col">
-      <span class="nome-evento">Atividade Complementar</span>
-      <span class="info-evento">Responsável: __________________</span>
-    </td>
-    <td class="quarta-col">
-      <span class="nome-evento">Visita Técnica</span>
-      <span class="info-evento">Empresa: __________________</span>
-      <span class="info-evento">Professor: __________________</span>
-    </td>
-    <td class="quinta-col">
-      <span class="nome-evento">Oficina</span>
-      <span class="info-evento">Ministrante: __________________</span>
-      <span class="info-evento">Professor: __________________</span>
-    </td>
-    <td class="sexta-col">
-      <span class="nome-evento">Atividade Final</span>
-      <span class="info-evento">Responsável: __________________</span>
-    </td>
-  </tr>
+        <tr>
+          <td class="col-horario">15:00</td>
+          <td class="segunda-col">
+            <span class="nome-evento">Dinâmica</span>
+            <span class="info-evento">Responsável: __________________</span>
+          </td>
+          <td class="terca-col">
+            <span class="nome-evento">Atividade Complementar</span>
+            <span class="info-evento">Responsável: __________________</span>
+          </td>
+          <td class="quarta-col">
+            <span class="nome-evento">Apresentação</span>
+            <span class="info-evento">Responsável: __________________</span>
+          </td>
+          <td class="quinta-col">
+            <span class="nome-evento">Oficina</span>
+            <span class="info-evento">Ministrante: __________________</span>
+            <span class="info-evento">Professor: __________________</span>
+          </td>
+          <td class="sexta-col">
+            <span class="nome-evento">Atividade Final</span>
+            <span class="info-evento">Responsável: __________________</span>
+          </td>
+        </tr>
 
-  <tr>
-    <td class="col-horario">15:30</td>
-    <td class="segunda-col">
-      <span class="nome-evento">Conclusão</span>
-      <span class="info-evento">Observações: __________________</span>
-    </td>
-    <td class="terca-col"></td>
-    <td class="quarta-col">
-      <span class="nome-evento">Visita Técnica</span>
-      <span class="info-evento">Empresa: __________________</span>
-      <span class="info-evento">Professor: __________________</span>
-    </td>
-    <td class="quinta-col"></td>
-    <td class="sexta-col"></td>
-  </tr>
+        <tr>
+          <td class="col-horario">15:30</td>
+          <td class="segunda-col">
+            <span class="nome-evento">Conclusão</span>
+            <span class="info-evento">Observações: __________________</span>
+          </td>
+          <td class="terca-col vazio"></td>
+          <td class="quarta-col">
+            <span class="nome-evento">Encerramento da Tarde</span>
+            <span class="info-evento">Responsável: __________________</span>
+          </td>
+          <td class="quinta-col vazio"></td>
+          <td class="sexta-col vazio"></td>
+        </tr>
 
-  <tr>
-    <td class="col-horario">16:00</td>
-    <td class="segunda-col">
-      <span class="nome-evento">Coffee Break</span>
-      <span class="info-evento">Organização: __________________</span>
-    </td>
-    <td class="terca-col"></td>
-    <td class="quarta-col">
-      <span class="nome-evento">Visita Técnica</span>
-      <span class="info-evento">Empresa: __________________</span>
-      <span class="info-evento">Professor: __________________</span>
-    </td>
-    <td class="quinta-col"></td>
-    <td class="sexta-col"></td>
-  </tr>
+        <tr>
+          <td class="col-horario">16:00</td>
+          <td class="segunda-col">
+            <span class="nome-evento">Coffee Break</span>
+            <span class="info-evento">Organização: __________________</span>
+          </td>
+          <td class="terca-col vazio"></td>
+          <td class="quarta-col vazio"></td>
+          <td class="quinta-col vazio"></td>
+          <td class="sexta-col vazio"></td>
+        </tr>
 
-  <tr>
-    <td class="col-horario">16:30</td>
-    <td class="segunda-col">
-      <span class="nome-evento">Encerramento do Dia</span>
-      <span class="info-evento">Responsáveis: __________________</span>
-    </td>
-    <td class="terca-col"></td>
-    <td class="quarta-col">
-      <span class="nome-evento">Retorno da Visita</span>
-      <span class="info-evento">Professor: __________________</span>
-    </td>
-    <td class="quinta-col"></td>
-    <td class="sexta-col"></td>
-  </tr>
+        <tr>
+          <td class="col-horario">16:30</td>
+          <td class="segunda-col">
+            <span class="nome-evento">Encerramento do Dia</span>
+            <span class="info-evento">Responsáveis: __________________</span>
+          </td>
+          <td class="terca-col vazio"></td>
+          <td class="quarta-col vazio"></td>
+          <td class="quinta-col vazio"></td>
+          <td class="sexta-col vazio"></td>
+        </tr>
 
-  <tr>
-    <td class="col-horario">17:00</td>
-    <td class="segunda-col"></td>
-    <td class="terca-col">
-      <span class="nome-evento">Atividade Cultural</span>
-      <span class="info-evento">Responsável: __________________</span>
-    </td>
-    <td class="quarta-col">
-      <span class="nome-evento">Atividade Cultural</span>
-      <span class="info-evento">Responsável: __________________</span>
-    </td>
-    <td class="quinta-col">
-      <span class="nome-evento">Atividade Cultural</span>
-      <span class="info-evento">Responsável: __________________</span>
-    </td>
-    <td class="sexta-col">
-      <span class="nome-evento">Encerramento Final</span>
-      <span class="info-evento">Responsáveis: __________________</span>
-    </td>
-  </tr>
-</table>
-  </div>
-    <section class="equipe">
+        <tr>
+          <td class="col-horario">17:00</td>
+          <td class="segunda-col vazio"></td>
+          <td class="terca-col">
+            <span class="nome-evento">Atividade Cultural</span>
+            <span class="info-evento">Responsável: __________________</span>
+          </td>
+          <td class="quarta-col">
+            <span class="nome-evento">Atividade Cultural</span>
+            <span class="info-evento">Responsável: __________________</span>
+          </td>
+          <td class="quinta-col">
+            <span class="nome-evento">Atividade Cultural</span>
+            <span class="info-evento">Responsável: __________________</span>
+          </td>
+          <td class="sexta-col">
+            <span class="nome-evento">Encerramento Final</span>
+            <span class="info-evento">Responsáveis: __________________</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <p class="obs-mobile">No celular, arraste a tabela para o lado para ver todos os dias.</p>
+
+    <section class="equipe" id="organizacao">
       <h2>Comissão Organizadora</h2>
 
       <div class="membros">
         <div class="membro">
-          <img src="integrante0.jpg.png" alt="Foto do Luiz Fernando Petters">
-           <h4>Luiz Fernando Petters</h4>
+          <img src="integrante0.jpg.png" alt="Foto de Luiz Fernando Petters">
+          <h4>Luiz Fernando Petters</h4>
           <p class="cargo">Presidente</p>
         </div>
 
         <div class="membro">
-           <img src="integrante1.jpg.png" alt="Foto de Rebeca Duarte de Souza">
+          <img src="integrante1.jpg.png" alt="Foto de Rebeca Duarte de Souza">
           <h4>Rebeca Duarte de Souza</h4>
           <p class="cargo">Coordenação Geral</p>
         </div>
 
         <div class="membro">
-         <img src="integrante2.jpg.png" alt="Foto de Rayssa Brunoro">
-          <h4>Rayssa Brunoro</h4>
+          <img src="integrante2.jpg.png" alt="Foto de Raissa">
+          <h4>Raissa</h4>
           <p class="cargo">Arte e Criação</p>
         </div>
 
         <div class="membro">
-          <img src="integrante3.jpg.png" alt="Foto de Débora  Lopes">
-          <h4>Débora Lopes</h4>
+          <img src="integrante3.jpg.png" alt="Foto de Débora">
+          <h4>Débora</h4>
           <p class="cargo">Coordenação de Vendas</p>
         </div>
 
         <div class="membro">
-         <img src="integrante4.jpg.png" alt="Foto de Ana Luísa">
+          <img src="integrante4.jpg.png" alt="Foto de Ana Luisa">
           <h4>Ana Luisa</h4>
           <p class="cargo">Comunicação e Divulgação</p>
         </div>
@@ -877,7 +693,7 @@ border-spacing: 0;
 
   <footer>
     <p>© 2026 - Semana Acadêmica UFFS</p>
-    <p>Site desenvolvido por Rebeca Duarte de Souza (Aluna de Engenharia Quimíca)</p>
+    <p>Site desenvolvido por Rebeca Duarte de Souza (aluna de Engenharia Química).</p>
   </footer>
 
 </body>
