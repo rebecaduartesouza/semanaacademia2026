@@ -1,197 +1,162 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Semana Acadêmica UFFS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana Acadêmica 2026</title>
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f6f5;
-  text-align: center;
-}
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #222;
+        }
 
-header {
-  background: linear-gradient(90deg, #1b5e20, #2e7d32);
-  color: white;
-  padding: 50px 20px;
-}
+        header {
+            background: linear-gradient(90deg, #1b5e20, #2e7d32);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
 
-h1 {
-  margin: 0;
-}
+        .logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
 
-.botao {
-  display: inline-block;
-  margin-top: 20px;
-  background: #ffca28;
-  color: black;
-  padding: 12px 25px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-}
+        .logos img {
+            width: 120px;
+            height: auto;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+        }
 
-section {
-  padding: 40px 20px;
-}
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 30px auto;
+        }
 
-h2 {
-  color: #1b5e20;
-}
+        .dia {
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
 
-.agenda {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
+        .dia h2 {
+            margin: 0;
+            background-color: #2e7d32;
+            color: white;
+            padding: 15px;
+        }
 
-.dia {
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  width: 280px;
-  box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
-}
+        .evento {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+        }
 
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
-  max-width: 900px;
-  margin: auto;
-}
+        .evento:last-child {
+            border-bottom: none;
+        }
 
-.galeria img {
-  width: 100%;
-  border-radius: 10px;
-}
+        .horario {
+            font-weight: bold;
+            color: #1b5e20;
+        }
 
-.organizadores {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.membro {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  width: 250px;
-  box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
-}
-
-.logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.logos img {
-  width: 120px;
-  background: white;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-footer {
-  background: #1b5e20;
-  color: white;
-  padding: 20px;
-  margin-top: 30px;
-}
-</style>
+        footer {
+            text-align: center;
+            background-color: #1b5e20;
+            color: white;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-  <h1>Semana Acadêmica</h1>
-  <p>Engenharia de Alimentos e Engenharia Química - UFFS</p>
+    <header>
+        <h1>Semana Acadêmica 2026</h1>
+        <p>Universidade Federal da Fronteira Sul</p>
+        <p>Programação oficial do evento</p>
+    </header>
 
-  <a href="https://forms.gle/SEU-LINK-AQUI" class="botao" target="_blank">
-    🔥 Fazer Inscrição
-  </a>
-</header>
-
-<section>
-  <h2>📅 Programação</h2>
-
-  <div class="agenda">
-    <div class="dia">
-      <h3>Segunda-feira</h3>
-      <p>19h00 - Abertura</p>
-      <p>20h00 - Palestra</p>
+    <div class="logos">
+        <img src="logo-curso1.png" alt="Logo do Curso 1">
+        <img src="logo-curso2.png" alt="Logo do Curso 2">
     </div>
 
-    <div class="dia">
-      <h3>Terça-feira</h3>
-      <p>19h00 - Minicursos</p>
-      <p>21h00 - Coffee Break</p>
+    <div class="container">
+
+        <div class="dia">
+            <h2>Segunda-feira</h2>
+            <div class="evento">
+                <p class="horario">08:00</p>
+                <p>Abertura oficial do evento</p>
+            </div>
+            <div class="evento">
+                <p class="horario">09:00</p>
+                <p>Palestra magna</p>
+            </div>
+            <div class="evento">
+                <p class="horario">14:00</p>
+                <p>Oficina / minicurso</p>
+            </div>
+        </div>
+
+        <div class="dia">
+            <h2>Terça-feira</h2>
+            <div class="evento">
+                <p class="horario">08:00</p>
+                <p>Atividade da manhã</p>
+            </div>
+            <div class="evento">
+                <p class="horario">14:00</p>
+                <p>Atividade da tarde</p>
+            </div>
+            <div class="evento">
+                <p class="horario">19:00</p>
+                <p>Palestra noturna</p>
+            </div>
+        </div>
+
+        <div class="dia">
+            <h2>Quarta-feira</h2>
+            <div class="evento">
+                <p class="horario">08:00</p>
+                <p>Programação da quarta</p>
+            </div>
+        </div>
+
+        <div class="dia">
+            <h2>Quinta-feira</h2>
+            <div class="evento">
+                <p class="horario">08:00</p>
+                <p>Programação da quinta</p>
+            </div>
+        </div>
+
+        <div class="dia">
+            <h2>Sexta-feira</h2>
+            <div class="evento">
+                <p class="horario">08:00</p>
+                <p>Encerramento / atividade final</p>
+            </div>
+        </div>
+
     </div>
 
-    <div class="dia">
-      <h3>Quarta-feira</h3>
-      <p>19h00 - Workshop</p>
-      <p>21h30 - Encerramento</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>📍 Local do Evento</h2>
-
-  <iframe 
-    src="https://www.google.com/maps?q=UFFS+Laranjeiras+do+Sul&output=embed"
-    width="90%" height="300"
-    style="border-radius:10px; border:none;">
-  </iframe>
-</section>
-
-<section>
-  <h2>🖼️ Galeria</h2>
-
-  <div class="galeria">
-    <img src="https://via.placeholder.com/300">
-    <img src="https://via.placeholder.com/300">
-    <img src="https://via.placeholder.com/300">
-  </div>
-</section>
-
-<section>
-  <h2>👥 Organizadores</h2>
-
-  <div class="organizadores">
-    <div class="membro">
-      <h3>Coordenação</h3>
-      <p>Rebeca Duarte de Souza</p>
-    </div>
-
-    <div class="membro">
-      <h3>Equipe</h3>
-      <p>Nome 1</p>
-      <p>Nome 2</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>🤝 Apoio</h2>
-
-  <div class="logos">
-    <img src="https://via.placeholder.com/150">
-    <img src="https://via.placeholder.com/150">
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 - UFFS</p>
-</footer>
+    <footer>
+        <p>© 2026 - Semana Acadêmica</p>
+    </footer>
 
 </body>
 </html>
