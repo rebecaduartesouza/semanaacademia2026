@@ -26,12 +26,26 @@
 
     header h1 {
       margin: 0;
-      font-size: 2.4rem;
+      font-size: 2.5rem;
     }
 
     header p {
-      margin-top: 10px;
+      margin: 8px 0 0 0;
       font-size: 1.1rem;
+    }
+
+    .banner {
+      width: 100%;
+      max-height: 420px;
+      overflow: hidden;
+      background-color: #ddd;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
     }
 
     .logos {
@@ -55,8 +69,8 @@
     }
 
     .container {
-      width: 90%;
-    max-width: 1100px;
+      width: 95%;
+      max-width: 1400px;
       margin: 30px auto;
     }
 
@@ -74,25 +88,40 @@
       color: #1b5e20;
     }
 
+    .programacao-titulo {
+      text-align: center;
+      color: #1b5e20;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .calendario {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+
     .dia {
       background-color: white;
       border-radius: 14px;
-      margin-bottom: 25px;
       overflow: hidden;
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      min-height: 100%;
     }
 
-    .dia h2 {
+    .dia h3 {
       margin: 0;
       background-color: #2e7d32;
       color: white;
-      padding: 16px 20px;
-      font-size: 1.4rem;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 1.2rem;
     }
 
     .evento {
-      padding: 18px 20px;
-      border-bottom: 1px solid #e8e8e8;
+      padding: 14px 14px 16px 14px;
+      border-bottom: 1px solid #ececec;
     }
 
     .evento:last-child {
@@ -100,42 +129,109 @@
     }
 
     .horario {
+      color: #c62828;
       font-weight: bold;
-      color: #1b5e20;
-      margin: 0 0 8px 0;
-      font-size: 1rem;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
     }
 
-    .titulo-evento {
+    .atividade {
       font-weight: bold;
-      margin: 0 0 6px 0;
-      font-size: 1.05rem;
+      margin-bottom: 6px;
+      color: #1b5e20;
     }
 
     .descricao {
       margin: 0;
-      line-height: 1.5;
+      line-height: 1.4;
+      font-size: 0.95rem;
+    }
+
+    .equipe {
+      background-color: white;
+      border-radius: 14px;
+      padding: 30px 20px;
+      margin-top: 35px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+
+    .equipe h2 {
+      color: #1b5e20;
+      margin-top: 0;
+      margin-bottom: 25px;
+    }
+
+    .membros {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .membro {
+      background-color: #f8faf8;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .membro img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 15px auto;
+      border: 4px solid #2e7d32;
+    }
+
+    .membro h4 {
+      margin: 10px 0 6px 0;
+      font-size: 1.1rem;
+    }
+
+    .cargo {
+      color: #1b5e20;
+      font-weight: bold;
+      margin: 0;
     }
 
     footer {
       background-color: #1b5e20;
       color: white;
       text-align: center;
-      padding: 18px;
+      padding: 20px;
       margin-top: 35px;
+      font-size: 14px;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 1200px) {
+      .calendario {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 800px) {
+      .calendario {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
       header h1 {
         font-size: 1.8rem;
       }
 
-      .dia h2 {
-        font-size: 1.2rem;
+      .calendario {
+        grid-template-columns: 1fr;
       }
 
       .logos img {
         width: 110px;
+      }
+
+      .banner img {
+        height: 250px;
       }
     }
   </style>
@@ -148,198 +244,245 @@
     <p>Engenharia de Alimentos e Química</p>
   </header>
 
+  <section class="banner">
+    <img src="banner-semana.jpg" alt="Banner da Semana Acadêmica">
+  </section>
+
   <section class="logos">
-<img src="logo-alimentos.png.png" alt="Logo de Engenharia de Alimentos">
-<img src="logo-quimica.png.png" alt="Logo de Química">
+    <img src="logo-alimentos.png.png" alt="Logo de Engenharia de Alimentos">
+    <img src="logo-quimica.png.png" alt="Logo de Química">
   </section>
 
   <main class="container">
     <section class="intro">
       <h2>Programação Oficial</h2>
       <p>
-        Bem-vindos à Semana Acadêmica 2026. Confira abaixo a programação semanal
-        com palestras, oficinas, minicursos, apresentações e atividades de integração.
+        Confira abaixo a programação completa da Semana Acadêmica 2026,
+        organizada em formato de calendário.
       </p>
     </section>
 
-    <section class="dia">
-      <h2>Segunda-feira</h2>
+    <h2 class="programacao-titulo">Calendário da Semana</h2>
 
-      <div class="evento">
-        <p class="horario">08:00 - 08:30</p>
-        <p class="titulo-evento">Credenciamento</p>
-        <p class="descricao">Recepção dos participantes e entrega de materiais do evento.</p>
+    <section class="calendario">
+      <div class="dia">
+        <h3>Segunda-feira</h3>
+
+        <div class="evento">
+          <div class="horario">08:00 - 08:30</div>
+          <div class="atividade">Credenciamento</div>
+          <p class="descricao">Recepção dos participantes e entrega de materiais do evento.</p>
+        </div>
+
+        <div class="evento">
+          <div class="horario">08:30 - 09:00</div>
+          <div class="atividade">Abertura Oficial</div>
+          <p class="descricao">Cerimônia de abertura com coordenação, professores e convidados.</p>
+        </div>
+
+        <div class="evento">
+          <div class="horario">09:00 - 10:30</div>
+          <div class="atividade">Palestra Magna</div>
+          <p class="descricao">Panorama atual da ciência, inovação e mercado profissional.</p>
+        </div>
+
+        <div class="evento">
+          <div class="horario">10:45 - 12:00</div>
+          <div class="atividade">Mesa-redonda</div>
+          <p class="descricao">Desafios e oportunidades para os cursos de Engenharia de Alimentos e Química.</p>
+        </div>
+
+        <div class="evento">
+          <div class="horario">14:00 - 16:00</div>
+          <div class="atividade">Oficina 1</div>
+          <p class="descricao">Atividade prática introdutória com participação dos estudantes.</p>
+        </div>
+
+        <div class="evento">
+          <div class="horario">19:00 - 21:00</div>
+          <div class="atividade">Palestra Noturna</div>
+          <p class="descricao">Formação acadêmica, pesquisa e atuação profissional.</p>
+        </div>
       </div>
 
-      <div class="evento">
-        <p class="horario">08:30 - 09:00</p>
-        <p class="titulo-evento">Abertura Oficial</p>
-        <p class="descricao">Cerimônia de abertura com coordenação, professores e convidados.</p>
+      <div class="dia">
+        <h3>Terça-feira</h3>
+
+        <div class="evento">
+          <div class="horario">08:00 - 10:00</div>
+          <div class="atividade">Minicurso 1</div>
+          <p class="descricao">Introdução a técnicas e ferramentas aplicadas à área.</p>
+        </div>
+
+        <div class="evento">
+          <div class="horario">10:15 - 12:00</div>
+          <div class="atividade">Palestra Técnica</div>
+          <p class="descricao">Qualidade, controle e inovação em processos industriais.</p>
+        </div>
+
+        <div class="evento">
+          <div class="horario">14:00 - 16:00</div>
+          <div class="atividade">Workshop</div>
+          <p class="descricao">Desenvolvimento de competências acadêmicas e profissionais.</p>
+        </div>
+
+        <div class="evento">
+          <div class="horario">16:15 - 17:30</div>
+          <div class="atividade">Apresentação de Projetos</div>
+          <p class="descricao">Socialização de trabalhos, pesquisas e iniciativas estudantis.</p>
+        </div>
+
+        <div class="evento">
+          <div class="horario">19:00 - 21:00</div>
+          <div class="atividade">Mesa de Discussão</div>
+          <p class="descricao">Integração entre universidade, pesquisa e setor produtivo.</p>
+        </div>
       </div>
 
-      <div class="evento">
-        <p class="horario">09:00 - 10:30</p>
-        <p class="titulo-evento">Palestra Magna</p>
-        <p class="descricao">Panorama atual da ciência, inovação e mercado profissional.</p>
+      <div class="dia">
+        <h3>Quarta-feira</h3>
+
+        <div class="evento">
+          <div class="horario">08:00 - 09:30</div>
+          <div class="atividade">Palestra Temática</div>
+          <p class="descricao">Sustentabilidade, tecnologia e perspectivas para o futuro.</p>
+        </div>
+
+        <div class="evento">
+          <div class="horario">09:45 - 12:00</div>
+          <div class="atividade">Minicurso 2</div>
+          <p class="descricao">Atividade formativa com conteúdo aplicado às áreas dos cursos.</p>
+        </div>
+
+        <div class="evento">
+          <div class="horario">14:00 - 15:30</div>
+          <div class="atividade">Sessão de Apresentações</div>
+          <p class="descricao">Exposição de trabalhos acadêmicos e relatos de experiências.</p>
+        </div>
+
+        <div class="evento">
+          <div class="horario">15:45 - 17:30</div>
+          <div class="atividade">Painel de Egressos</div>
+          <p class="descricao">Trajetórias profissionais e experiências no mercado de trabalho.</p>
+        </div>
+
+        <div class="evento">
+          <div class="horario">19:00 - 21:00</div>
+          <div class="atividade">Palestra Especial</div>
+          <p class="descricao">Ciência, inovação e empreendedorismo na formação universitária.</p>
+        </div>
       </div>
 
-      <div class="evento">
-        <p class="horario">10:45 - 12:00</p>
-        <p class="titulo-evento">Mesa-redonda</p>
-        <p class="descricao">Desafios e oportunidades para os cursos de Engenharia de Alimentos e Química.</p>
+      <div class="dia">
+        <h3>Quinta-feira</h3>
+
+        <div class="evento">
+          <div class="horario">08:00 - 10:00</div>
+          <div class="atividade">Oficina 2</div>
+          <p class="descricao">Atividade prática com foco em aplicações e resolução de problemas.</p>
+        </div>
+
+        <div class="evento">
+          <div class="horario">10:15 - 12:00</div>
+          <div class="atividade">Palestra Técnica</div>
+          <p class="descricao">Tendências atuais nas áreas de alimentos, química e inovação.</p>
+        </div>
+
+        <div class="evento">
+          <div class="horario">14:00 - 16:00</div>
+          <div class="atividade">Roda de Conversa</div>
+          <p class="descricao">Discussão sobre extensão, pesquisa, estágio e oportunidades acadêmicas.</p>
+        </div>
+
+        <div class="evento">
+          <div class="horario">16:15 - 17:30</div>
+          <div class="atividade">Atividade Integrativa</div>
+          <p class="descricao">Momento de troca entre estudantes, docentes e participantes do evento.</p>
+        </div>
+
+        <div class="evento">
+          <div class="horario">19:00 - 21:00</div>
+          <div class="atividade">Palestra de Encaminhamento Profissional</div>
+          <p class="descricao">Competências, carreira e construção do perfil profissional.</p>
+        </div>
       </div>
 
-      <div class="evento">
-        <p class="horario">14:00 - 16:00</p>
-        <p class="titulo-evento">Oficina 1</p>
-        <p class="descricao">Atividade prática introdutória com participação dos estudantes.</p>
-      </div>
+      <div class="dia">
+        <h3>Sexta-feira</h3>
 
-      <div class="evento">
-        <p class="horario">19:00 - 21:00</p>
-        <p class="titulo-evento">Palestra Noturna</p>
-        <p class="descricao">Formação acadêmica, pesquisa e atuação profissional.</p>
+        <div class="evento">
+          <div class="horario">08:00 - 10:00</div>
+          <div class="atividade">Sessão Final de Trabalhos</div>
+          <p class="descricao">Últimas apresentações e encerramento das exposições acadêmicas.</p>
+        </div>
+
+        <div class="evento">
+          <div class="horario">10:15 - 11:30</div>
+          <div class="atividade">Avaliação e Feedback</div>
+          <p class="descricao">Espaço para participação dos estudantes e avaliação do evento.</p>
+        </div>
+
+        <div class="evento">
+          <div class="horario">11:30 - 12:00</div>
+          <div class="atividade">Encerramento Oficial</div>
+          <p class="descricao">Agradecimentos finais e encerramento da Semana Acadêmica 2026.</p>
+        </div>
+
+        <div class="evento">
+          <div class="horario">14:00 - 16:00</div>
+          <div class="atividade">Atividade de Integração</div>
+          <p class="descricao">Momento de confraternização e integração entre os participantes.</p>
+        </div>
       </div>
     </section>
 
-    <section class="dia">
-      <h2>Terça-feira</h2>
+    <section class="equipe">
+      <h2>Comissão Organizadora</h2>
 
-      <div class="evento">
-        <p class="horario">08:00 - 10:00</p>
-        <p class="titulo-evento">Minicurso 1</p>
-        <p class="descricao">Introdução a técnicas e ferramentas aplicadas à área.</p>
-      </div>
+      <div class="membros">
+        <div class="membro">
+          <img src="rebeca.jpg" alt="Foto de Rebeca Duarte Souza">
+          <h4>Rebeca Duarte Souza</h4>
+          <p class="cargo">Coordenação Geral</p>
+        </div>
 
-      <div class="evento">
-        <p class="horario">10:15 - 12:00</p>
-        <p class="titulo-evento">Palestra Técnica</p>
-        <p class="descricao">Qualidade, controle e inovação em processos industriais.</p>
-      </div>
+        <div class="membro">
+          <img src="integrante1.jpg" alt="Foto do integrante 1">
+          <h4>Nome do Integrante 1</h4>
+          <p class="cargo">Secretaria e Credenciamento</p>
+        </div>
 
-      <div class="evento">
-        <p class="horario">14:00 - 16:00</p>
-        <p class="titulo-evento">Workshop</p>
-        <p class="descricao">Desenvolvimento de competências acadêmicas e profissionais.</p>
-      </div>
+        <div class="membro">
+          <img src="integrante2.jpg" alt="Foto do integrante 2">
+          <h4>Nome do Integrante 2</h4>
+          <p class="cargo">Divulgação</p>
+        </div>
 
-      <div class="evento">
-        <p class="horario">16:15 - 17:30</p>
-        <p class="titulo-evento">Apresentação de Projetos</p>
-        <p class="descricao">Socialização de trabalhos, pesquisas e iniciativas estudantis.</p>
-      </div>
+        <div class="membro">
+          <img src="integrante3.jpg" alt="Foto do integrante 3">
+          <h4>Nome do Integrante 3</h4>
+          <p class="cargo">Organização de Palestras</p>
+        </div>
 
-      <div class="evento">
-        <p class="horario">19:00 - 21:00</p>
-        <p class="titulo-evento">Mesa de Discussão</p>
-        <p class="descricao">Integração entre universidade, pesquisa e setor produtivo.</p>
-      </div>
-    </section>
+        <div class="membro">
+          <img src="integrante4.jpg" alt="Foto do integrante 4">
+          <h4>Nome do Integrante 4</h4>
+          <p class="cargo">Apoio e Logística</p>
+        </div>
 
-    <section class="dia">
-      <h2>Quarta-feira</h2>
-
-      <div class="evento">
-        <p class="horario">08:00 - 09:30</p>
-        <p class="titulo-evento">Palestra Temática</p>
-        <p class="descricao">Sustentabilidade, tecnologia e perspectivas para o futuro.</p>
-      </div>
-
-      <div class="evento">
-        <p class="horario">09:45 - 12:00</p>
-        <p class="titulo-evento">Minicurso 2</p>
-        <p class="descricao">Atividade formativa com conteúdo aplicado às áreas dos cursos.</p>
-      </div>
-
-      <div class="evento">
-        <p class="horario">14:00 - 15:30</p>
-        <p class="titulo-evento">Sessão de Apresentações</p>
-        <p class="descricao">Exposição de trabalhos acadêmicos e relatos de experiências.</p>
-      </div>
-
-      <div class="evento">
-        <p class="horario">15:45 - 17:30</p>
-        <p class="titulo-evento">Painel de Egressos</p>
-        <p class="descricao">Trajetórias profissionais e experiências no mercado de trabalho.</p>
-      </div>
-
-      <div class="evento">
-        <p class="horario">19:00 - 21:00</p>
-        <p class="titulo-evento">Palestra Especial</p>
-        <p class="descricao">Ciência, inovação e empreendedorismo na formação universitária.</p>
-      </div>
-    </section>
-
-    <section class="dia">
-      <h2>Quinta-feira</h2>
-
-      <div class="evento">
-        <p class="horario">08:00 - 10:00</p>
-        <p class="titulo-evento">Oficina 2</p>
-        <p class="descricao">Atividade prática com foco em aplicações e resolução de problemas.</p>
-      </div>
-
-      <div class="evento">
-        <p class="horario">10:15 - 12:00</p>
-        <p class="titulo-evento">Palestra Técnica</p>
-        <p class="descricao">Tendências atuais nas áreas de alimentos, química e inovação.</p>
-      </div>
-
-      <div class="evento">
-        <p class="horario">14:00 - 16:00</p>
-        <p class="titulo-evento">Roda de Conversa</p>
-        <p class="descricao">Discussão sobre extensão, pesquisa, estágio e oportunidades acadêmicas.</p>
-      </div>
-
-      <div class="evento">
-        <p class="horario">16:15 - 17:30</p>
-        <p class="titulo-evento">Atividade Integrativa</p>
-        <p class="descricao">Momento de troca entre estudantes, docentes e participantes do evento.</p>
-      </div>
-
-      <div class="evento">
-        <p class="horario">19:00 - 21:00</p>
-        <p class="titulo-evento">Palestra de Encaminhamento Profissional</p>
-        <p class="descricao">Competências, carreira e construção do perfil profissional.</p>
-      </div>
-    </section>
-
-    <section class="dia">
-      <h2>Sexta-feira</h2>
-
-      <div class="evento">
-        <p class="horario">08:00 - 10:00</p>
-        <p class="titulo-evento">Sessão Final de Trabalhos</p>
-        <p class="descricao">Últimas apresentações e encerramento das exposições acadêmicas.</p>
-      </div>
-
-      <div class="evento">
-        <p class="horario">10:15 - 11:30</p>
-        <p class="titulo-evento">Avaliação e Feedback</p>
-        <p class="descricao">Espaço para participação dos estudantes e avaliação do evento.</p>
-      </div>
-
-      <div class="evento">
-        <p class="horario">11:30 - 12:00</p>
-        <p class="titulo-evento">Encerramento Oficial</p>
-        <p class="descricao">Agradecimentos finais e encerramento da Semana Acadêmica 2026.</p>
-      </div>
-
-      <div class="evento">
-        <p class="horario">14:00 - 16:00</p>
-        <p class="titulo-evento">Atividade de Integração</p>
-        <p class="descricao">Momento de confraternização e integração entre os participantes.</p>
+        <div class="membro">
+          <img src="integrante5.jpg" alt="Foto do integrante 5">
+          <h4>Nome do Integrante 5</h4>
+          <p class="cargo">Comunicação</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
     <p>© 2026 - Semana Acadêmica UFFS</p>
-    <p>Site desenvolvido por Rebeca Duarte Souza (Discente Engenharia Quimíca</p>
-</footer>
-
-</body>
-</html>
+    <p>Site desenvolvido por Rebeca Duarte Souza e integrantes da comissão organizadora.</p>
+  </footer>
 
 </body>
 </html>
