@@ -462,6 +462,14 @@
     padding: 6px;
   }
 }
+    .tabela-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tabela-agenda {
+  min-width: 900px;
+}
   </style>
 </head>
 <body>
@@ -495,7 +503,8 @@
   <h2 class="programacao-titulo">Agenda Semanal</h2>
 <p class="subtitulo-agenda">Semana Acadêmica - 18 a 22 de Maio de 2026</p>
 
-<table class="tabela-agenda">
+<div class="tabela-container">
+  <table class="tabela-agenda">
   <tr>
     <th>Horário</th>
     <th>Segunda</th>
