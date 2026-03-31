@@ -96,12 +96,11 @@
     }
 
     .calendario {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 18px;
-      align-items: start;
-    }
-
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+      }
+    
     .dia {
       background-color: white;
       border-radius: 14px;
@@ -233,6 +232,17 @@
       .banner img {
         height: 250px;
       }
+      @media (max-width: 900px) {
+  .calendario {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .calendario {
+    grid-template-columns: 1fr;
+  }
+}
     }
   </style>
 </head>
