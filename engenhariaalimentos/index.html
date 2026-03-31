@@ -96,57 +96,73 @@
       font-size: 2rem;
     }
 
-    .calendario {
+   .calendario-semanal {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 15px;
-      }
-    
-    .dia {
-      background-color: white;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-      min-height: 100%;
-    }
+  gap: 0;
+  width: 100%;
+  background-color: white;
+  border: 2px solid #c62828;
+  margin-top: 20px;
+}
 
-    .dia h3 {
-      margin: 0;
-      background-color: #2e7d32;
-      color: white;
-      text-align: center;
-      padding: 15px 10px;
-      font-size: 1.2rem;
-    }
+.coluna-dia {
+  padding-bottom: 10px;
+  min-height: 100%;
+}
 
-    .evento {
-      padding: 14px 14px 16px 14px;
-      border-bottom: 1px solid #ececec;
-    }
+.coluna-dia h3 {
+  margin: 0;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 2px solid #c62828;
+  border-right: 1px solid #c62828;
+  font-size: 1.1rem;
+  background-color: #ffffff;
+}
 
-    .evento:last-child {
-      border-bottom: none;
-    }
+.coluna-dia:last-child h3 {
+  border-right: none;
+}
 
-    .horario {
-      color: #c62828;
-      font-weight: bold;
-      font-size: 0.95rem;
-      margin-bottom: 6px;
-    }
+.coluna-dia p {
+  margin: 0;
+  padding: 3px 10px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
 
-    .atividade {
-      font-weight: bold;
-      margin-bottom: 6px;
-      color: #1b5e20;
-    }
+.segunda {
+  background-color: #f8caca;
+}
 
-    .descricao {
-      margin: 0;
-      line-height: 1.4;
-      font-size: 0.95rem;
-    }
+.terca {
+  background-color: #cfe7bf;
+}
 
+.quarta {
+  background-color: #f2c89e;
+}
+
+.quinta {
+  background-color: #bfe3a8;
+}
+
+.sexta {
+  background-color: #f4d45d;
+}
+
+@media (max-width: 1100px) {
+  .calendario-semanal {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .calendario-semanal {
+    grid-template-columns: 1fr;
+  }
+}
     .equipe {
       background-color: white;
       border-radius: 14px;
@@ -295,170 +311,138 @@
 
     <h2 class="programacao-titulo">Calendário da Semana</h2>
 
-    <section class="calendario">
-      <div class="dia">
-        <h3>Segunda-feira</h3>
+    <h2 class="programacao-titulo">Agenda Semanal</h2>
+<p style="text-align:center; margin-top:-10px; margin-bottom:20px; font-weight:bold;">
+  Semana Acadêmica - 18 a 22 de Maio 2026
+</p>
 
-        <div class="evento">
-          <div class="horario">13:00 - 13:30</div>
-          <div class="atividade">Credenciamento</div>
-          <p class="descricao">Recepção dos participantes e entrega de materiais do evento.</p>
-        </div>
+<section class="calendario-semanal">
+  <div class="coluna-dia segunda">
+    <h3>Segunda</h3>
+    <p>6:00</p>
+    <p>7:00</p>
+    <p>8:00</p>
+    <p>8:30</p>
+    <p>9:00</p>
+    <p>9:30</p>
+    <p>10:00</p>
+    <p>10:30</p>
+    <p>11:00</p>
+    <p>11:30</p>
+    <p>12:00</p>
+    <p>12:30</p>
+    <p>13:00</p>
+    <p>13:30 - Abertura</p>
+    <p>14:00 - Mesa redonda</p>
+    <p>14:30 - Mesa redonda</p>
+    <p>15:00 - Dinâmica</p>
+    <p>15:30 - Conclusão</p>
+    <p>16:00 - Mesa redonda</p>
+    <p>16:30 - Coffee</p>
+    <p>17:00 - Conclusão</p>
+    <p>17:30 - Mesa redonda</p>
+  </div>
 
-        <div class="evento">
-          <div class="horario">13:30 - 14:00</div>
-          <div class="atividade">Abertura Oficial</div>
-          <p class="descricao">Cerimônia de abertura com coordenação, professores e convidados.</p>
-        </div>
+  <div class="coluna-dia terca">
+    <h3>Terça</h3>
+    <p>6:00</p>
+    <p>7:00</p>
+    <p>8:00</p>
+    <p>8:30</p>
+    <p>9:00</p>
+    <p>9:30</p>
+    <p>10:00</p>
+    <p>10:30</p>
+    <p>11:00</p>
+    <p>11:30</p>
+    <p>12:00</p>
+    <p>12:30</p>
+    <p>13:00</p>
+    <p>13:30</p>
+    <p>14:00 - Coprossel</p>
+    <p>14:30 - Coprossel</p>
+    <p>15:00 - Piquinqui</p>
+    <p>15:30</p>
+    <p>16:00</p>
+    <p>16:30</p>
+    <p>17:00</p>
+  </div>
 
-        <div class="evento">
-          <div class="horario">14:30 - 15:30</div>
-          <div class="atividade">Mesa Reonda</div>
-          <p class="descricao">Desafios e oportunidades para os cursos de Engenharia de Alimentos e Química</p>
-        </div>
+  <div class="coluna-dia quarta">
+    <h3>Quarta</h3>
+    <p>6:00 - visita</p>
+    <p>7:00 - visita</p>
+    <p>8:00 - visita</p>
+    <p>8:30 - visita</p>
+    <p>9:00 - visita</p>
+    <p>9:30 - visita</p>
+    <p>10:00 - visita</p>
+    <p>10:30 - visita</p>
+    <p>11:00 - visita</p>
+    <p>11:30 - visita</p>
+    <p>12:00 - visita</p>
+    <p>12:30 - visita</p>
+    <p>13:00 - visita</p>
+    <p>13:30 - visita</p>
+    <p>14:00 - visita</p>
+    <p>14:30 - visita</p>
+    <p>15:00 - visita</p>
+    <p>15:30 - visita</p>
+    <p>16:00 - visita</p>
+    <p>16:30 - visita</p>
+    <p>17:00 - visita</p>
+  </div>
 
-        <div class="evento">
-          <div class="horario">16:00 - 16:30</div>
-          <div class="atividade">Coffe</div>
-          <p class="descricao">Somente participantes credenciados</p>
-        </div>
+  <div class="coluna-dia quinta">
+    <h3>Quinta</h3>
+    <p>6:00</p>
+    <p>7:00</p>
+    <p>8:00</p>
+    <p>8:30</p>
+    <p>9:00</p>
+    <p>9:30</p>
+    <p>10:00</p>
+    <p>10:30</p>
+    <p>11:00</p>
+    <p>11:30</p>
+    <p>12:00</p>
+    <p>12:30</p>
+    <p>13:00</p>
+    <p>13:30 - Sorvete</p>
+    <p>14:00 - Sorvete</p>
+    <p>14:30 - Sorvete</p>
+    <p>15:00 - Sorvete</p>
+    <p>15:30 - Sorvete</p>
+    <p>16:00 - Sorvete</p>
+    <p>16:30 - Sorvete</p>
+    <p>17:00 - Sorvete</p>
+  </div>
 
-        <div class="evento">
-          <div class="horario">16:30 - 17:30</div>
-          <div class="atividade">Sorteios</div>
-          <p class="descricao">Sorteio rifa e patrocinadores</p>
-        </div>
-
-      <div class="dia">
-        <h3>Terça-feira</h3>
-
-        <div class="evento">
-          <div class="horario">08:00 - 10:00</div>
-          <div class="atividade">Minicurso 1</div>
-          <p class="descricao">Introdução a técnicas e ferramentas aplicadas à área.</p>
-        </div>
-
-        <div class="evento">
-          <div class="horario">10:15 - 12:00</div>
-          <div class="atividade">Palestra Técnica</div>
-          <p class="descricao">Qualidade, controle e inovação em processos industriais.</p>
-        </div>
-
-        <div class="evento">
-          <div class="horario">14:00 - 16:00</div>
-          <div class="atividade">Workshop</div>
-          <p class="descricao">Desenvolvimento de competências acadêmicas e profissionais.</p>
-        </div>
-
-        <div class="evento">
-          <div class="horario">16:15 - 17:30</div>
-          <div class="atividade">Apresentação de Projetos</div>
-          <p class="descricao">Socialização de trabalhos, pesquisas e iniciativas estudantis.</p>
-        </div>
-
-        <div class="evento">
-          <div class="horario">19:00 - 21:00</div>
-          <div class="atividade">Mesa de Discussão</div>
-          <p class="descricao">Integração entre universidade, pesquisa e setor produtivo.</p>
-        </div>
-      </div>
-
-      <div class="dia">
-        <h3>Quarta-feira</h3>
-
-        <div class="evento">
-          <div class="horario">08:00 - 09:30</div>
-          <div class="atividade">Palestra Temática</div>
-          <p class="descricao">Sustentabilidade, tecnologia e perspectivas para o futuro.</p>
-        </div>
-
-        <div class="evento">
-          <div class="horario">09:45 - 12:00</div>
-          <div class="atividade">Minicurso 2</div>
-          <p class="descricao">Atividade formativa com conteúdo aplicado às áreas dos cursos.</p>
-        </div>
-
-        <div class="evento">
-          <div class="horario">14:00 - 15:30</div>
-          <div class="atividade">Sessão de Apresentações</div>
-          <p class="descricao">Exposição de trabalhos acadêmicos e relatos de experiências.</p>
-        </div>
-
-        <div class="evento">
-          <div class="horario">15:45 - 17:30</div>
-          <div class="atividade">Painel de Egressos</div>
-          <p class="descricao">Trajetórias profissionais e experiências no mercado de trabalho.</p>
-        </div>
-
-        <div class="evento">
-          <div class="horario">19:00 - 21:00</div>
-          <div class="atividade">Palestra Especial</div>
-          <p class="descricao">Ciência, inovação e empreendedorismo na formação universitária.</p>
-        </div>
-      </div>
-
-      <div class="dia">
-        <h3>Quinta-feira</h3>
-
-        <div class="evento">
-          <div class="horario">08:00 - 10:00</div>
-          <div class="atividade">Oficina 2</div>
-          <p class="descricao">Atividade prática com foco em aplicações e resolução de problemas.</p>
-        </div>
-
-        <div class="evento">
-          <div class="horario">10:15 - 12:00</div>
-          <div class="atividade">Palestra Técnica</div>
-          <p class="descricao">Tendências atuais nas áreas de alimentos, química e inovação.</p>
-        </div>
-
-        <div class="evento">
-          <div class="horario">14:00 - 16:00</div>
-          <div class="atividade">Roda de Conversa</div>
-          <p class="descricao">Discussão sobre extensão, pesquisa, estágio e oportunidades acadêmicas.</p>
-        </div>
-
-        <div class="evento">
-          <div class="horario">16:15 - 17:30</div>
-          <div class="atividade">Atividade Integrativa</div>
-          <p class="descricao">Momento de troca entre estudantes, docentes e participantes do evento.</p>
-        </div>
-
-        <div class="evento">
-          <div class="horario">19:00 - 21:00</div>
-          <div class="atividade">Palestra de Encaminhamento Profissional</div>
-          <p class="descricao">Competências, carreira e construção do perfil profissional.</p>
-        </div>
-      </div>
-
-      <div class="dia">
-        <h3>Sexta-feira</h3>
-
-        <div class="evento">
-          <div class="horario">08:00 - 10:00</div>
-          <div class="atividade">Sessão Final de Trabalhos</div>
-          <p class="descricao">Últimas apresentações e encerramento das exposições acadêmicas.</p>
-        </div>
-
-        <div class="evento">
-          <div class="horario">10:15 - 11:30</div>
-          <div class="atividade">Avaliação e Feedback</div>
-          <p class="descricao">Espaço para participação dos estudantes e avaliação do evento.</p>
-        </div>
-
-        <div class="evento">
-          <div class="horario">11:30 - 12:00</div>
-          <div class="atividade">Encerramento Oficial</div>
-          <p class="descricao">Agradecimentos finais e encerramento da Semana Acadêmica 2026.</p>
-        </div>
-
-        <div class="evento">
-          <div class="horario">14:00 - 16:00</div>
-          <div class="atividade">Atividade de Integração</div>
-          <p class="descricao">Momento de confraternização e integração entre os participantes.</p>
-        </div>
-      </div>
-    </section>
+  <div class="coluna-dia sexta">
+    <h3>Sexta</h3>
+    <p>6:00</p>
+    <p>7:00</p>
+    <p>8:00</p>
+    <p>8:30</p>
+    <p>9:00</p>
+    <p>9:30</p>
+    <p>10:00</p>
+    <p>10:30</p>
+    <p>11:00</p>
+    <p>11:30</p>
+    <p>12:00</p>
+    <p>12:30</p>
+    <p>13:00</p>
+    <p>13:30 - Chocolate</p>
+    <p>14:00 - Chocolate</p>
+    <p>14:30 - Chocolate</p>
+    <p>15:00 - Chocolate</p>
+    <p>15:30 - Chocolate</p>
+    <p>16:00 - Chocolate</p>
+    <p>16:30 - Chocolate</p>
+    <p>17:00 - Chocolate</p>
+  </div>
+</section>
 
     <section class="equipe">
       <h2>Comissão Organizadora</h2>
@@ -466,38 +450,32 @@
       <div class="membros">
         <div class="membro">
           <img src="rebeca.jpg" alt="Foto de Rebeca Duarte Souza">
-          <h4>Rebeca Duarte Souza</h4>
-          <p class="cargo">Coordenação Geral</p>
+          <h4>Luiz Fernando Petters</h4>
+          <p class="cargo">Presidente</p>
         </div>
 
         <div class="membro">
           <img src="integrante1.jpg" alt="Foto do integrante 1">
-          <h4>Nome do Integrante 1</h4>
-          <p class="cargo">Secretaria e Credenciamento</p>
+          <h4>Rebeca Duarte de Souza</h4>
+          <p class="cargo">Coordenação Geral</p>
         </div>
 
         <div class="membro">
           <img src="integrante2.jpg" alt="Foto do integrante 2">
-          <h4>Nome do Integrante 2</h4>
-          <p class="cargo">Divulgação</p>
+          <h4>Raissa</h4>
+          <p class="cargo">Arte e Criação</p>
         </div>
 
         <div class="membro">
           <img src="integrante3.jpg" alt="Foto do integrante 3">
-          <h4>Nome do Integrante 3</h4>
-          <p class="cargo">Organização de Palestras</p>
+          <h4>Débora</h4>
+          <p class="cargo">Coordenação de Vendas</p>
         </div>
 
         <div class="membro">
           <img src="integrante4.jpg" alt="Foto do integrante 4">
-          <h4>Nome do Integrante 4</h4>
-          <p class="cargo">Apoio e Logística</p>
-        </div>
-
-        <div class="membro">
-          <img src="integrante5.jpg" alt="Foto do integrante 5">
-          <h4>Nome do Integrante 5</h4>
-          <p class="cargo">Comunicação</p>
+          <h4>Ana Luisa</h4>
+          <p class="cargo">Comunicação e Divulgação</p>
         </div>
       </div>
     </section>
